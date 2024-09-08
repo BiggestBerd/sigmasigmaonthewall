@@ -38,3 +38,20 @@ function click123() {
         display new text
     */
 }
+
+document.getElementById('catButton').addEventListener('click', function() {
+    const catGrid = document.getElementById('catGrid');
+    catGrid.innerHTML = '';
+    catGrid.style.display = 'grid';
+
+    for (let i = 0; i < 100; i++) {
+        const img = document.createElement('img');
+        img.src = `https://placekitten.com/${getRandomSize()}/${getRandomSize()}`;
+        img.classList.add('cat-image');
+        catGrid.appendChild(img);
+    }
+});
+
+function getRandomSize() {
+    return Math.floor(Math.random() * 100) + 200;
+}
