@@ -30,6 +30,9 @@ function click123() {
         textboz.style.display = "none";
     }, 3000);
 
+
+
+
     /*
     if cat exists: 
         set catexists to false 
